@@ -1,0 +1,287 @@
+html,
+body {
+    font-size: 62.5%;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #242B33;
+    overflow-x: hidden;
+}
+header{
+    background-image: url(../img/Rectangle.jpg);
+    height: 84rem;
+}
+.nav{
+    padding-top: 5.5rem;
+    gap: 0!important;
+}
+nav{
+    
+    justify-content: space-between;
+}
+.logo{
+    padding-top: 3rem;
+    font-family: 'Post No Bills Jaffna SemiBold';
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+.logo-down{
+    font-size: 1.2rem;
+    line-height: 114%;
+    /* identical to box height */
+
+    letter-spacing: 0.12em;
+}
+.nav-link{
+    font-size: 1.4rem;
+    line-height: 114%;
+    letter-spacing: 0.05em;
+
+    color: #FFFFFF;
+}
+.nav-item{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.nav{
+    gap: 4rem;
+}
+h1{
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 133%;
+    text-align: center;
+    margin: 22.5rem auto 10rem;
+    max-width: 55.6rem;
+    color: #D4C17F;
+}
+.header__mouse>svg{
+    margin: auto;
+}
+.header__info{
+    margin-top: 20rem;
+    justify-content: center;
+    gap: 10rem;
+    font-size: 1.8rem;
+    line-height: 116%;
+}
+.header__info>div>svg{
+    margin-right: 1.5rem;
+}
+.appartaments{
+    background: #242B33;
+    position: relative;
+}
+.appartaments>svg{
+    position: absolute;
+    top: 50rem;
+}
+.appartaments__about{
+    justify-content: center;
+    gap: 7rem;
+    position: relative;
+}
+.about__item{
+    display: flex;
+    height: 18rem;
+    width: 19.3rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20rem;
+}
+.about__item-img{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__item-text{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 135%;
+    /* or 135% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+.num{
+    position: absolute;
+}
+.appartament__num{
+    right: 0;
+}
+h2{
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 133%;
+    margin-top: 12rem;
+    /* accent */
+
+    color: #D4C17F;
+
+}
+.appartaments__loft{
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+.loft__item{
+    width: 45%;
+    height: 32rem;
+    background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0) 0.01%, #242B33 100%), url(../img/Loft.jpg) no-repeat, #D4C17F ;
+    background-size: cover;
+    font-size: 2.4rem;
+    line-height: 116%;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    align-items: flex-end;
+    z-index: 3;
+}
+.credit{
+    padding-top: 20rem;
+    background: url(../img/skyscream.jpg);
+    background-size: cover;
+}
+.credit__request-text{
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-top: 5rem;
+}
+.input-name,
+.input-tel{
+    background: #FFFFFF;
+    opacity: 0.2;
+    color: #BEBEBE;
+    width: 25.5rem;
+    height: 5rem;
+    font-size: 1.4rem;
+    line-height: 192%;
+    text-align: center;
+}
+form{
+    margin-top: 3rem;
+    grid-template-areas: 
+    "input-one input-two"
+    "text btn";
+    gap: 3rem;
+    margin-left: 3.5rem;
+}
+.input-tel{
+    grid-area: input-two;
+}
+.input-name{
+    grid-area: input-one;
+}
+form>div{
+    grid-area: text;
+    font-size: 1.3rem;
+    line-height: 123%;
+    /* or 123% */
+    text-align: center;
+    color: #E7E7E7;
+    width: 25.5rem;
+    height: 5rem;
+}
+.btn{
+    grid-area: btn;
+    background: #D4C17F;
+    font-size: 1.6rem;
+    line-height: 169%;
+    /* identical to box height, or 169% */
+    text-align: center;
+    color: #FFFFFF;
+    width: 25.5rem;
+    height: 5rem;
+}
+.about>.container{
+    position: relative;
+}
+.about>.container>svg{
+    position: absolute;
+    top: 30%;
+    right: -15rem;
+}
+.about__movie{
+    margin: 18rem auto;
+    background: url(../img/Loft.jpg);
+    background-size: cover;
+    width: 71.9rem;
+    height: 65rem;
+
+    position: relative;
+}
+.btn__wrap{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.btn__wrap:hover{
+    cursor: pointer;
+}
+.map__map{
+    width: 111rem;
+    height: 35.8rem;
+    background: #626262;
+    margin: 10rem auto;
+}
+.ask>form{
+    margin-left: 0;
+    margin-bottom: 18rem;
+}
+.ask{
+    margin-top: 18rem;
+}
+footer{
+    background: #2D343C;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+}
+.footer__nav{
+    flex-direction: column;
+}
+.footer__nav>.nav-item{
+    font-size: 1.4rem;
+    line-height: 114%;
+    letter-spacing: 0.05em;
+}
+.footer__nav>.nav-item>.nav-link{
+    padding: 0;
+}
+.footer__nav>.nav-item>span{
+    color: #D4C17F;
+}
+.footer__nav>.nav-item>svg:not(:first-of-type){
+    margin-left: 2rem;
+}
+
+
+
+@media (min-width: 1199.98px){ 
+    .ask>form{
+        grid-template-areas: "text input-one input-two btn";        
+    }
+}
+@media (max-width: 1199.98px){ 
+    .map__map{
+        width: 90%;     
+    }
+}
+@media (max-width: 992px){ 
+    .credit__request{
+        flex-direction: column;   
+    }
+    .about__movie{
+    width: 71.9vw;
+    height: 65vw;
+}
+}

@@ -10,15 +10,57 @@ body {
 }
 header{
     background-image: url(../img/Rectangle.jpg);
-    height: 84rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 84rem;
+    position: relative;
 }
 .nav{
     padding-top: 5.5rem;
     gap: 0!important;
 }
 nav{
-    
+    display: flex;
     justify-content: space-between;
+}
+.nav__burger{
+    position: fixed;
+    top: 7rem;
+    right: 1.5rem;
+    color: #FFFFFF;
+    display: none;
+    z-index: 99;
+}
+.nav__burger-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #242B33;
+    box-shadow: 0px 14px 14px rgba(0, 0, 0, 0.36);
+    z-index: 100;
+    width: 100%;
+}
+.nav__burger-close{
+    position: absolute;
+    top: 6rem;
+    right: 1.5rem;
+    font-size: 2.1rem;
+
+}
+.burger__nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem!important;
+}
+.burger__nav>.nav-item{
+    margin-top: 2rem;
+}
+.nav__burger-menu>.nav-logo{
+    position: absolute;
+    top: 4rem;
+    left: .75rem;
 }
 .logo{
     padding-top: 3rem;
@@ -39,8 +81,14 @@ nav{
     font-size: 1.4rem;
     line-height: 114%;
     letter-spacing: 0.05em;
-
     color: #FFFFFF;
+}
+.nav-link:hover,
+.nav__burger:hover,
+.nav-item>svg:hover,
+.nav__burger-close:hover{
+    color: #D4C17F;
+    cursor: pointer;
 }
 .nav-item{
     color: #FFFFFF;
@@ -55,19 +103,23 @@ h1{
     font-size: 4.8rem;
     line-height: 133%;
     text-align: center;
-    margin: 22.5rem auto 10rem;
+    margin: 20rem auto auto;
     max-width: 55.6rem;
     color: #D4C17F;
 }
-.header__mouse>svg{
-    margin: auto;
+.header__mouse{
+    position: absolute;
+    bottom: 21.5rem;
+    left: 50%;
+    transform:translate(-50%, -50%);
 }
 .header__info{
-    margin-top: 20rem;
+    margin-top: 34rem;
     justify-content: center;
     gap: 10rem;
     font-size: 1.8rem;
     line-height: 116%;
+    padding-bottom: 7rem;
 }
 .header__info>div>svg{
     margin-right: 1.5rem;
@@ -92,7 +144,7 @@ h1{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin-top: 20rem;
+    margin-top: 12rem;
 }
 .about__item-img{
     height: 8rem;
@@ -136,7 +188,7 @@ h2{
 .loft__item{
     width: 45%;
     height: 32rem;
-    background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0) 0.01%, #242B33 100%), url(../img/Loft.jpg) no-repeat, #D4C17F ;
+    background: url(../img/Loft.jpg) no-repeat;
     background-size: cover;
     font-size: 2.4rem;
     line-height: 116%;
@@ -212,11 +264,10 @@ form>div{
 }
 .about__movie{
     margin: 18rem auto;
-    background: url(../img/Loft.jpg);
+    background: linear-gradient(0deg, rgba(36, 43, 51, 0.8), rgba(36, 43, 51, 0.8)), url(../img/Loft.jpg) no-repeat;
     background-size: cover;
     width: 71.9rem;
     height: 65rem;
-
     position: relative;
 }
 .btn__wrap{
@@ -233,10 +284,18 @@ form>div{
     height: 35.8rem;
     background: #626262;
     margin: 10rem auto;
+    position: relative;
+}
+.map__map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 .ask>form{
     margin-left: 0;
-    margin-bottom: 18rem;
+    margin-bottom: 18rem; 
 }
 .ask{
     margin-top: 18rem;
@@ -253,6 +312,7 @@ footer{
     font-size: 1.4rem;
     line-height: 114%;
     letter-spacing: 0.05em;
+    margin-top: 1.5rem;
 }
 .footer__nav>.nav-item>.nav-link{
     padding: 0;
@@ -263,8 +323,20 @@ footer{
 .footer__nav>.nav-item>svg:not(:first-of-type){
     margin-left: 2rem;
 }
+.footer__nav>.nav-item:first-child{
 
-
+    margin-top: 0;
+}
+.burger__nav>.nav-item>.nav-link{
+    font-size: 2rem;
+    line-height: 115%;
+}
+.burger__nav>.nav-item:first-child{
+    margin-top: 10.8rem;
+}
+.burger__nav>.nav-item:last-child{
+    margin-bottom: 4rem;
+}
 
 @media (min-width: 1199.98px){ 
     .ask>form{
@@ -275,6 +347,14 @@ footer{
     .map__map{
         width: 90%;     
     }
+    .input-name,
+    form>div{
+        margin-left: auto;
+        margin-right: 0;
+    }
+    h2{
+        text-align: center;
+    }
 }
 @media (max-width: 992px){ 
     .credit__request{
@@ -284,4 +364,92 @@ footer{
     width: 71.9vw;
     height: 65vw;
 }
+    .appartaments__about{
+        flex-wrap: wrap;
+    }
+    .about__item{
+        margin-top: 0;
+    }
+    .appartaments__loft{
+        flex-wrap: wrap;
+        
+    }
+    .loft__item{
+        width: 55rem;
+        margin: 3rem auto;
+    }
+    form{
+        margin-left: 0;
+    }
+}
+@media (max-width: 768px){ 
+    footer>div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav{
+        padding-top: 0;
+        margin-top: 4rem;
+    }
+    .footer__nav>nav-item:first-of-type{
+        margin-top: 3rem;
+    }
+    header>div>nav>.nav{
+        display: none!important;
+    }
+    .header__info{
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    .header__mouse{
+        display: none;
+    }
+    h1{
+        font-size: 2.6rem;
+
+    }
+    h2{
+        font-size: 26px;
+        margin-top: 0;
+    }
+    .logo{
+        padding-top: 1rem;
+    }
+
+    form{
+        grid-template-areas: 
+        "input-one" 
+        "input-two"
+        "btn"
+        "text";
+    }
+    .input-name,
+    .input-tel,
+    .btn,
+    form>div{
+        margin: auto;
+    }
+    .nav__burger{
+        display: block;
+    }
+    .credit{
+        padding-top: 0;
+    }
+    .about__movie{
+    width: 90vw;
+    height: 90vw;
+}
+    .ask{
+        margin-top: 0;
+    }
+    .ask>form{
+        margin-bottom: 0;
+    }
+    footer{
+        padding-top: 1rem;
+    }
+    .about__movie{
+        margin: auto;
+    }
 }
